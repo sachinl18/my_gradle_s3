@@ -9,6 +9,7 @@ pipeline {
         S3_KEY = 'sachin-s3-lambda-bucket/jb-hello-world-0.1.0.jar'
     }
 
+    stages {
         stage('Build') {
             steps {
                 sh './gradlew clean build'
@@ -40,4 +41,3 @@ pipeline {
         }
     }
 }
-
